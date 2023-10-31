@@ -1,12 +1,13 @@
 .navbar {
+    padding: 1rem 0;
     header {
         height: 10vh;
-        line-height: 10vh;
-    }
-    header .nav-container {
-        padding-top: 10px;
         width: 95%;
         margin: auto;
+    }
+    header .logo {
+        display: flex;
+        align-items: center;
     }
     header ul li {
         margin-left: 30px;
@@ -16,6 +17,7 @@
         font-size: 13px;
         font-weight: 500;
         letter-spacing: 1px;
+        color: black;
     }
     header ul li a:hover {
         color: #ff014f;
@@ -42,12 +44,14 @@
         display: none;
     }
     .header.active {
-        height: 12vh;
+        height: 13vh;
         position: fixed;
         top: 0;
+        padding: 2rem;
         z-index: 1000;
+        margin: auto;
         width: 100%;
-        background-color: #ecf0f3;
+        background-color: #fff;
         box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
         transition: 0.5s;
     }

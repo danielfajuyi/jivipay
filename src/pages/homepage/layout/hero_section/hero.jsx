@@ -1,11 +1,12 @@
 import React from "react";
 import "./hero.scss";
+import HeroSlider from "../../../../components/sliders/hero_slider";
 
 const Hero = () => {
   return (
     <>
-      <header className="hero-container">
-        <section className="hero-section container"></section>
+      <header className="hero-section">
+        <HeroSlider />
       </header>
     </>
   );

@@ -4,20 +4,18 @@
   max-width: 95%;
   margin: auto;
 }
+
+
 .d_flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .f_flex {
   display: flex;
+  align-items: center;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-li {
-  list-style: none;
-}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -72,21 +70,12 @@ button {
   letter-spacing: 2px;
   font-weight: 400;
 }
-.heading h1 {
-  font-size: 60px;
-  color: #3c3e41;
-}
-h1 {
-  color: #3c3e41;
-}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 35px;
 }
-p {
-  color: #3c3e41;
-}
+
 .text-center {
   text-align: center;
 }
