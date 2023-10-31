@@ -1,16 +1,32 @@
 import React, { useContext } from "react";
 import { HeroContext } from "./hero_slider";
 import Slider from "react-slick";
-import UilFacebook from "@iconscout/react-unicons/icons/uil-facebook";
-import UilWhatsapp from "@iconscout/react-unicons/icons/uil-whatsapp";
-import UilInstagram from "@iconscout/react-unicons/icons/uil-instagram";
-import UilTwitter from "@iconscout/react-unicons/icons/uil-twitter";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./hero_slider.scss";
+import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
+import UilArrowLeft from "@iconscout/react-unicons/icons/uil-arrow-left";
 const SliderCard = () => {
   const { hero } = useContext(HeroContext);
-  const ptext = "hover or click to view profile";
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <>
+        <button className="  s-arrow s-arrow-left" onClick={onClick}>
+          <UilArrowLeft />
+        </button>
+      </>
+    );
+  };
+
+  const NextArrow = ({ onClick }) => {
+    return (
+      <>
+        <button className="  s-arrow s-arrow-right" onClick={onClick}>
+          <UilArrowRight />
+        </button>
+      </>
+    );
+  };
   let settings = {
     dots: true,
     infinite: true,
@@ -19,6 +35,8 @@ const SliderCard = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     cssEase: "linear",
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 600,
