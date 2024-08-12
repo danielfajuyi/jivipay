@@ -53,6 +53,8 @@ const SliderCard = () => {
                     {item.lastName}
                   </h2>
 
+                 
+                  <p>{ptext}</p>
                   <p>{ptext}</p>
                 </div>
               </div>
